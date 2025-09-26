@@ -50,23 +50,21 @@ terraform-lambda-apigateway/
 
 terraform init
 
-
 3.Plan the deployment:
 
 terraform plan
-
 
 4.Apply configuration:
 
 terraform apply -auto-approve
 
-
 5.After successful deployment, Terraform will output the API Gateway Invoke URL.
 You can test it with:
 
-curl https://<api-id>.execute-api.<region>.amazonaws.com/dev/
+curl https://08982f1c5bf93d976.execute-api.us-east-1.amazonaws.com/dev/
 
 🐍 Sample Lambda Function (lambda_function.py)
+
 import json
 
 def lambda_handler(event, context):
@@ -77,8 +75,6 @@ def lambda_handler(event, context):
             "input": event
         }),
     }
-
-
 This simple function returns a JSON response when invoked via API Gateway.
 
 🧹 Clean Up
@@ -91,5 +87,8 @@ terraform destroy -auto-approve
 
 This project is licensed under the MIT License.
 
-
 ---
+
+
+
+
