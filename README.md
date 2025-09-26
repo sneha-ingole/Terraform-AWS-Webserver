@@ -17,8 +17,13 @@ It demonstrates how to deploy a serverless function and make it accessible via a
 
 terraform-lambda-apigateway/
 │-- main.tf
+
 │-- variables.tf
+
 │-- outputs.tf
+
 │-- provider.tf
+
 │-- lambda_function.py
+
 │-- README.md
