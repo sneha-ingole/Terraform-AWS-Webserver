@@ -1,0 +1,21 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Package Lambda and Apply Terraform",
+			"type": "shell",
+			"command": "cd ../lambda; Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass; ./package_lambda.ps1; cd ../terraform; terraform init; terraform apply -auto-approve",
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Package Lambda and Apply Terraform",
+			"type": "shell",
+			"command": "cd ../lambda; Compress-Archive -Path ./lambda_function.py -DestinationPath ./lambda.zip -Force; cd ../terraform; terraform init; terraform apply -auto-approve",
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}
