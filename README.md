@@ -14,6 +14,7 @@ It demonstrates how to deploy a serverless function and make it accessible via a
 ---
 
 ## 📂 Project Structure
+
 terraform-lambda-apigateway/
 │-- main.tf
 │-- variables.tf
